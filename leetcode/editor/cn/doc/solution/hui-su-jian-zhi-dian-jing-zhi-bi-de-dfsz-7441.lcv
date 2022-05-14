@@ -1,0 +1,52 @@
+一般的总体肯定是回溯＋剪支
+对于我这个初学者来说，好久没有几分钟提交一道题一边通过了，激动！
+如何进行便捷的剪支是重点
+这里采用一般的回溯问题的三步走来解决dfs
+**1.截止条件**
+用于结束dfs，添加结果
+**2.候选元素**
+用于对给出输入的元素进行dfs，本题就是数组中元素
+**3.剪支筛选**
+对于不符合条件的候选元素去掉
+**本体核心剪支方法**
+如果没有剪支，直接每次for循环遍历数组，这样会有重复元素，对于例子1，会出现
+[2，2，3]，[2,3,2],[3,2,2]这样的组合
+我们为了不出现这样的例子，在for循环开始的第一个元素做限制，不从0开始，从传入的这个元素开始
+这样就可以保证单个数字可重复使用，不会使用到之前用过的数字，所以dfs参数中需要加一个int变量用于标识数组角标
+
+* 
+
+```
+class Solution {
+    List<List<Integer>> res=new ArrayList<>();
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    List<Integer> list=new ArrayList<>();
+     dfs(candidates,target,list,0);
+     return res;
+    }
+    //数组nums和目标值target是肯定需要传入的两个参数
+    //为了方便list加入数字也传入
+    //添加nowposition是运行代码后，发现‘[2，2，3]，[2,3,2],[3,2,2]这样的组合
+    //需要进行剪枝，但如何能更便捷间枝，需要在for循环中进行处理
+    public void dfs(int[] nums,int target,List<Integer> list,int nowposition){
+        //1.截止条件
+        if(target<0)return;
+        if(target==0){
+            res.add(new ArrayList(list));
+            return;
+        }
+        //2.所有候选元素
+        for(int i=nowposition;i<nums.length;i++){
+            list.add(nums[i]);
+            //3.进行剪枝
+            //这里添加i作为参数进入是点睛之笔，也就是说，每次for循环开始只能从nowposition开始
+            //这里意味着，2，3，6，7这个数组，如果已经循环到3，就只能从3开始循环后面元素，不会重复2
+            //这样就实现了剪枝
+            dfs(nums,target-nums[i],list,i);
+            list.remove(list.size()-1);
+        }
+        return;
+    }
+}
+```
+

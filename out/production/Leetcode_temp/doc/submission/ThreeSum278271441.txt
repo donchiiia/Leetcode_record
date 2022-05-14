@@ -1,0 +1,38 @@
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> list = new ArrayList<>();
+
+        int length = nums.length;
+        //先对nums进行排序
+        Arrays.sort(nums);
+
+        for(int i = 0; i < length; i++){
+            if (nums[i] > 0) return list;
+            //循环到当前位置，要先与之前一位进行值的比较，避免出现重复, 当然，为了判断能够顺利进行要保证i>0。
+            if (i > 0 && nums[i] == nums[i-1]) continue;
+            //接下来就是保证三数之和为0了，考虑到已经顺序排序，使用对撞指针能优化复杂度
+            int L = i + 1, R = length - 1;
+            while(L < R){
+                if (nums[i] + nums[L] + nums[R] == 0){
+                    List<Integer> subList = new ArrayList<>();
+                    subList.add(nums[i]);
+                    subList.add(nums[L]);
+                    subList.add(nums[R]);
+                    list.add(subList);
+                    //除了在外循环中保证不重复，在双指针的内循环也要保证不重复
+                    while(L < R && nums[L] == nums[L+1]) L++;
+                    while(L < R && nums[R] == nums[R-1]) R--;
+                    ++L;
+                    --R;
+                } else if (nums[i] + nums[L] + nums[R] > 0){
+                    R--;
+                } else{
+                    L++;
+                }
+            }
+        }
+        return list;
+    }
+}
+//runtime:19 ms
+//memory:45.7 MB

@@ -1,0 +1,55 @@
+class Solution {
+    public void solveSudoku(char[][] board) {
+        int row = board.length, column = board[0].length;
+        boolean[][] judgeRow = new boolean[row][column];
+        boolean[][] judgeColumn = new boolean[row][column];
+        boolean[][] judgeMatrix = new boolean[row][column];
+
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                if (board[i][j] != '.') {
+                    int temp = board[i][j] - '1';
+                    judgeRow[i][temp] = judgeColumn[j][temp] = true;
+                    judgeMatrix[i / 3 * 3 + j / 3][temp] = true;
+                }
+            }
+        }
+        dfs(board, judgeRow, judgeColumn, judgeMatrix, 0, 0);
+    }
+
+    public boolean dfs(char[][] board, boolean[][] judgeRow, boolean[][] judgeColumn, boolean[][] judgeMatrix, int i,
+                    int j) {
+        //先寻找到空位置，如果都没找到意味着数独已经完成
+        while (board[i][j] != '.') {
+            if (++j >= 9) {
+                i++;
+                j = 0;
+            }
+            if (i >= 9) {
+                return true;
+            }
+        }
+        //将1-9通过循环代入该空位置
+        for (int num = 0; num < 9; num++) {
+            int matrixnum = i / 3 * 3 + j / 3;
+            //如果条件暂时满足就将其加入该位置
+            if (!judgeRow[i][num] && !judgeColumn[j][num] && !judgeMatrix[matrixnum][num]) {
+                board[i][j] = (char) ('1' + num);
+                judgeRow[i][num] = judgeColumn[j][num] = judgeMatrix[matrixnum][num] = true;
+                //放入该位置后，假设该位置正确，递归调用该方法
+                if (dfs(board, judgeRow, judgeColumn, judgeMatrix, i, j)) {
+                    return true;
+                } else {
+                    //当递归调用发现不满足时就回溯原先的结果
+                    board[i][j] = '.';
+                    judgeRow[i][num] = judgeColumn[j][num] = judgeMatrix[matrixnum][num] = false;
+                }
+            }
+        }
+        //到这个位置就意味着使用所有1-9插入board[i][j]都没有正确返回，这说明上层插入的数值有问题，使用false向上层传递信息
+        return false;
+    }
+}
+
+//runtime:2 ms
+//memory:38.7 MB

@@ -1,0 +1,36 @@
+定义[left,right]为需要读取单词的区间
+指针left、right定义为在去掉字符串首尾空格后字符串的首尾位置
+1.去掉字符串首尾左右空格，移动left、right指针指向去掉空格后的首尾位置。
+while（left<=right）{
+2.从后往前一个个遍历单词，设置index指针，指向right位置，index从后往前遍历，直到遇到空格或者末尾
+说明此时已经将其中一个单词遍历完。
+3.此时index+1为该单词的首位，遍历字符串[index+1,right]区间，加入到StringBuffer中
+4.判断index位置，加入空格：若index位置已经到达头位置了，说明不需要添加空格，否则都需要添加空格隔开单词
+5.index继续从后往前遍历，跳过空格直到遇到非空字符，将right指向index的位置执行下一次循环
+}
+6.返回StringBuilder.toString();
+
+* 
+
+```
+class Solution {
+    public String reverseWords(String s) {
+        char[] c = s.toCharArray();
+        int left = 0;
+        int right = c.length-1;
+        StringBuilder str = new StringBuilder();
+        while(c[left]==' ') left++;
+        while(c[right] == ' ') right--;
+        while(left <= right){
+            int index = right;
+            while(index >= left && c[index] != ' ' ) index--;
+            for(int i = index+1 ; i <= right ; i++ ) str.append( c[i] );
+            if(index > left) str.append(' ');
+            while( index >= left && c[index]==' ' ) index--;
+            right = index;
+        }
+        return str.toString();
+    }
+}
+```
+

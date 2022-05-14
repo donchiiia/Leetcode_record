@@ -1,0 +1,83 @@
+[👍⭐️⭐️【算法-对撞指针｜TwoSum（模版题）】167. 两数之和 II - 输入有序数组](https://tinydolphin.top/535e5db5-bcc5-4c94-b01c-0b6c90aa9b3b)
+
+- - 题目分析：
+    - 题意分析：找出和为 target 的两个元素下标
+    - 题目要求：
+      - 输入：
+        - 数组：下标从 **1 开始** & 有序**非递减**；
+        - target ：[-1000, 1000]；
+      - 要求：
+        - 数组的**两数之和**等于 target；
+        - **两数不重复**；
+        - **常量级额外空间**；
+      - 输出：**唯一的答案。**
+- 重难点分析：
+  - **Q：如何确定左右指针移动方向？**
+  - A：当两数之和 **< target** 时，**left 指针右移**；否则 right 指针左移。
+- 关键思想：双指针求两数之和
+- 复杂度分析：$3 * 10^4 ⇒ O(nlogn)$
+- 解题思路：「**双指针 - 对撞指针**」：$<O(n), O(1)>$
+
+* cpp
+
+```cpp
+#define _sz(x) (int)(x).size()
+
+class Solution
+{
+public:
+    vector<int> twoSum(vector<int>& nums, int target)
+    {
+        int n = _sz(nums);
+        // 左右指针
+        int left = 0, right = n - 1;
+        while (left < right) {
+            // 满足条件，即返回
+            if (target == nums[left] + nums[right]) { return {left + 1, right + 1}; }
+            // 左指针右移：两数之和 < target
+            else if (nums[left] + nums[right] < target) {
+                ++left;
+            }
+            // 右指针左移：两数之和 > target
+            else {
+                --right;
+            }
+        }
+        return {-1, -1};
+    }
+};
+```
+
+- **二分查找**：$<O(nlogn), O(1)>$
+
+* cpp
+
+```cpp
+#define _for(i, a, b) for (int i = (a); i < (b); ++i)
+#define _sz(x) (int)(x).size()
+
+class Solution
+{
+public:
+    vector<int> twoSum(vector<int>& nums, int target)
+    {
+        int n = _sz(nums);
+        _for(idx, 0, n)
+        {
+            // 范围 [idx+1, n) 中找出第一个 >= target - nums[idx] 的位置
+            int left = idx + 1, right = n;
+            while (left < right) {
+                int mid = left + ((right - left) >> 1);
+                if (nums[mid] >= target - nums[idx]) { right = mid; }
+                else {
+                    left = mid + 1;
+                }
+            }
+            // NB left == n 代表未找到
+            if (left != n && nums[left] == target - nums[idx]) return {idx + 1, left + 1};
+        }
+        return {-1, -1};
+    }
+};
+```
+

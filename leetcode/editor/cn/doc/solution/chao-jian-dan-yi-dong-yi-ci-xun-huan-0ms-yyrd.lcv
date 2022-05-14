@@ -1,0 +1,64 @@
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;该题可理解为找到比当前数组组成的数更大且紧邻的下一个数
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先找到数组中最后一次升序的下标，例如[6,7,1,2,3,5,4]中3所在的位置，因为6712354中3所在的位数最小（百位），且后面存在比其大的数。再找到3之后比3大的最小数4，明显将4移动到百位比将5移动到百位的值更小，交换3与4之后[6,7,1,2,4,5,3]，要对4之后的数升序排列，因为3在十位比5在十位更小
+
+* java
+
+```java
+class Solution {
+    public void nextPermutation(int[] nums) {
+        int first = -1;
+        int min = -1;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i + 1] > nums[i]) {
+                first = i;
+                min = i + 1;
+                continue;
+            }
+            if (first != -1) {
+                if (nums[i + 1] > nums[first]) {
+                    min = i + 1;
+                }
+            }
+        }
+        if (first != -1) {
+            // 交换位置
+            swapArray(nums, first, min);
+            // 指定下标升序
+            sort(nums, first + 1, nums.length);
+        } else {
+            sort(nums, 0, nums.length);
+        }
+    }
+
+    // 快排算法，与题目无关，可不看
+    private void sort(int[] nums, int start, int end) {
+        if (start > nums.length - 2 || end <= start) {
+            return;
+        }
+        int middle = start;
+        int greaterIndex = -1;
+        for (int i = start + 1; i < end; i++) {
+            if (nums[i] < nums[middle]) {
+                swapArray(nums, middle, i);
+                if (greaterIndex != -1) {
+                    swapArray(nums, ++middle, i);
+                } else {
+                    middle = i;
+                }
+            } else if (greaterIndex == -1 && nums[i] > nums[middle]) {
+                greaterIndex = i;
+            }
+        }
+        sort(nums, start, middle);
+        sort(nums, middle + 1, end);
+    }
+
+    // 交换位置
+    private void swapArray(int[] nums, int i, int j) {
+        int i1 = nums[i];
+        nums[i] = nums[j];
+        nums[j] = i1;
+    }
+}
+```
+

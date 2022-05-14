@@ -1,0 +1,44 @@
+# **Ps：建议：有了位运算基础再看**
+
+此方法因为空间是可控的 所以空间复杂度为O1
+
+![100.png](https://pic.leetcode-cn.com/1645000060-ZclsXF-100.png)
+
+二进制 用某一位的1代表这个数字出现过，因为题目存储的数字范围是1~9，所以我们需要9个位来标记数字，而int 的 二进制 是32位，所以足以存储。
+
+**以下 我们可以用0代表没出现，1代表出现过。**
+
+**初始化为0，代表都没有出现过。**
+![微信图片_20220216155007.png](https://pic.leetcode-cn.com/1644997818-mygBcB-%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220216155007.png)
+![Snipaste_2022-02-16_16-03-23.png](https://pic.leetcode-cn.com/1644998629-gEGzXt-Snipaste_2022-02-16_16-03-23.png)
+
+![Snipaste_2022-02-16_15-54-15.png](https://pic.leetcode-cn.com/1644998069-KQBphS-Snipaste_2022-02-16_15-54-15.png)
+![Snipaste_2022-02-16_16-07-02.png](https://pic.leetcode-cn.com/1644998851-tIVMws-Snipaste_2022-02-16_16-07-02.png)
+![Snipaste_2022-02-16_16-14-39.png](https://pic.leetcode-cn.com/1644999290-abcyzc-Snipaste_2022-02-16_16-14-39.png)
+
+千言万语，还是看代码更实用一些，因为代码比图文更容易明白。
+
+* 
+
+```
+class Solution {
+        public boolean isValidSudoku(char[][] board) {
+        int[] row = new int[9], col = new int[9];
+        int[] v = new int[9];
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] == '.') continue;
+                int num = 1 << (board[i][j] - '0');
+                int b = (i / 3 )* 3 + j / 3;
+                if ((row[i] & num) != 0 || (col[j] & num) != 0 || (v[b] & num) != 0) return false;
+                row[i] |= num;
+                col[j] |= num;
+                v[b] |= num;
+            }
+        }
+        return true;
+    }
+
+}
+```
+

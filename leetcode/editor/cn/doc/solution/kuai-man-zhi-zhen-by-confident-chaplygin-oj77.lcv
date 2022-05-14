@@ -1,0 +1,41 @@
+### 解题思路
+
+慢指针一次前进一个，快指针一次前进两个，这样理论上快指针到头时，慢指针恰到中间位置，此时返回慢指针所在节点即可，但要注意快指针到头时的一点细节。
+
+### 代码
+
+* java
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode middleNode(ListNode head) 
+    {
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast.next != null)
+        {
+            if(fast.next.next == null)//细节：如不把该种情况列出来，则会在fast.next.next为null时，进入while判断后再加一个next造成执行出错。因此此时需将其放缓一个节点，使进入while判断时恰为最后一个节点。
+            fast = fast.next;
+            else fast = fast.next.next;
+            slow = slow.next;
+            
+        }
+        head = slow;
+        return head;
+
+
+
+    }
+}
+```
+
