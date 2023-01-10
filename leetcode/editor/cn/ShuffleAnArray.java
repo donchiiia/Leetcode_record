@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+package editor.cn;
+
 import java.util.Arrays;
 import java.util.Random;
 

@@ -1,4 +1,6 @@
-  /**
+package editor.cn;
+
+/**
 Reverse bits of a given 32 bits unsigned integer. 
 
  Note: 

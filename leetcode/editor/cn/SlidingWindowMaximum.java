@@ -1,7 +1,7 @@
+package editor.cn;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
 You are given an array of integers nums, there is a sliding window of size k 

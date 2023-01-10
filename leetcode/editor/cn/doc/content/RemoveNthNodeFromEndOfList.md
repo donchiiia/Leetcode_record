@@ -28,7 +28,7 @@
 <ul>
 	<li>The number of nodes in the list is <code>sz</code>.</li>
 	<li><code>1 &lt;= sz &lt;= 30</code></li>
-	<li><code>0 &lt;= Node.val &lt;= 100</code></li>
+	<li><code>0 &lt;= editor.cn.Node.val &lt;= 100</code></li>
 	<li><code>1 &lt;= n &lt;= sz</code></li>
 </ul>
 

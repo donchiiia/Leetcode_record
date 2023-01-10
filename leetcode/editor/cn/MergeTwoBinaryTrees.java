@@ -1,4 +1,6 @@
-  /**
+package editor.cn;
+
+/**
 You are given two binary trees root1 and root2. 
 
  Imagine that when you put one of them to cover the other, some nodes of the 
@@ -44,13 +46,13 @@ Output: [2,2]
       //leetcode submit region begin(Prohibit modification and deletion)
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class editor.cn.TreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *     editor.cn.TreeNode left;
+ *     editor.cn.TreeNode right;
+ *     editor.cn.TreeNode() {}
+ *     editor.cn.TreeNode(int val) { this.val = val; }
+ *     editor.cn.TreeNode(int val, editor.cn.TreeNode left, editor.cn.TreeNode right) {
  *         this.val = val;
  *         this.left = left;
  *         this.right = right;

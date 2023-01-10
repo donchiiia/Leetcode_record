@@ -1,4 +1,6 @@
-  /**
+package editor.cn;
+
+/**
 You have a RecentCounter class which counts the number of recent requests 
 within a certain time frame. 
 
@@ -50,7 +52,7 @@ recentCounter.ping(3002);  // requests = [1, 100, 3001, 3002], range is [2,3002]
   
   public class NumberOfRecentCalls{
       public static void main(String[] args) {
-//           Solution solution = new NumberOfRecentCalls().new Solution();
+//           Solution solution = new editor.cn.NumberOfRecentCalls().new Solution();
       }
       //leetcode submit region begin(Prohibit modification and deletion)
 class RecentCounter {

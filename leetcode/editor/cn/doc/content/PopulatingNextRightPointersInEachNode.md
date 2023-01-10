@@ -1,11 +1,11 @@
 <p>You are given a <strong>perfect binary tree</strong> where all leaves are on the same level, and every parent has two children. The binary tree has the following definition:</p>
 
 <pre>
-struct Node {
+struct editor.cn.Node {
   int val;
-  Node *left;
-  Node *right;
-  Node *next;
+  editor.cn.Node *left;
+  editor.cn.Node *right;
+  editor.cn.Node *next;
 }
 </pre>
 
@@ -34,7 +34,7 @@ struct Node {
 
 <ul>
 	<li>The number of nodes in the tree is in the range <code>[0, 2<sup>12</sup> - 1]</code>.</li>
-	<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
+	<li><code>-1000 &lt;= editor.cn.Node.val &lt;= 1000</code></li>
 </ul>
 
 <p>&nbsp;</p>

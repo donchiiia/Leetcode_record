@@ -34,7 +34,7 @@
 
 <ul>
 	<li>The number of the nodes in the list is in the range <code>[0, 10<sup>4</sup>]</code>.</li>
-	<li><code>-10<sup>5</sup> &lt;= Node.val &lt;= 10<sup>5</sup></code></li>
+	<li><code>-10<sup>5</sup> &lt;= editor.cn.Node.val &lt;= 10<sup>5</sup></code></li>
 	<li><code>pos</code> is <code>-1</code> or a <strong>valid index</strong> in the linked-list.</li>
 </ul>
 

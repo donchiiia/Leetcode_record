@@ -80,7 +80,7 @@ class Solution {
 ### 测试用例
 ```
 public static void main(String[] args) {
-           Solution solution = new SudokuSolver().new Solution();
+           Solution solution = new editor.cn.SudokuSolver().new Solution();
           char[][] board = new char[][]{
                   {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
                   {'6', '.', '.', '1', '9', '5', '.', '.', '.'},

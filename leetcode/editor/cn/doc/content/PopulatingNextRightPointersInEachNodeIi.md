@@ -1,11 +1,11 @@
 <p>Given a binary tree</p>
 
 <pre>
-struct Node {
+struct editor.cn.Node {
   int val;
-  Node *left;
-  Node *right;
-  Node *next;
+  editor.cn.Node *left;
+  editor.cn.Node *right;
+  editor.cn.Node *next;
 }
 </pre>
 
@@ -34,7 +34,7 @@ struct Node {
 
 <ul>
 	<li>The number of nodes in the tree is in the range <code>[0, 6000]</code>.</li>
-	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
+	<li><code>-100 &lt;= editor.cn.Node.val &lt;= 100</code></li>
 </ul>
 
 <p>&nbsp;</p>

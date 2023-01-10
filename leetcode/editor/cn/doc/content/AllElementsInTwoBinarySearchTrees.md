@@ -20,6 +20,6 @@
 
 <ul>
 	<li>The number of nodes in each tree is in the range <code>[0, 5000]</code>.</li>
-	<li><code>-10<sup>5</sup> &lt;= Node.val &lt;= 10<sup>5</sup></code></li>
+	<li><code>-10<sup>5</sup> &lt;= editor.cn.Node.val &lt;= 10<sup>5</sup></code></li>
 </ul>
 <div><div>Related Topics</div><div><li>树</li><li>深度优先搜索</li><li>二叉搜索树</li><li>二叉树</li><li>排序</li></div></div><br><div><li>👍 80</li><li>👎 0</li></div>

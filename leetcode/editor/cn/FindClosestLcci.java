@@ -1,3 +1,5 @@
+package editor.cn;
+
 /**
 You have a large text file containing words. Given any two different words, 
 find the shortest distance (in terms of number of words) between them in the file. 

@@ -20,7 +20,7 @@
 
 <ul>
 	<li>The number of nodes in the list is in the range <code>[0, 300]</code>.</li>
-	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
+	<li><code>-100 &lt;= editor.cn.Node.val &lt;= 100</code></li>
 	<li>The list is guaranteed to be <strong>sorted</strong> in ascending order.</li>
 </ul>
 <div><div>Related Topics</div><div><li>链表</li><li>双指针</li></div></div><br><div><li>👍 854</li><li>👎 0</li></div>

@@ -1,4 +1,4 @@
-import java.util.WeakHashMap;
+package editor.cn;
 
 /**
 Given an m x n grid of characters board and a string word, return true if word 

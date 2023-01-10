@@ -1,7 +1,4 @@
-import java.lang.invoke.VarHandle;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
+package editor.cn;
 
 /**
 You are given an integer array nums. You want to maximize the number of points 

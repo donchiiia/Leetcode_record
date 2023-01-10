@@ -1,3 +1,5 @@
+package editor.cn;
+
 class Node {
 	public int val;
 	public Node left;

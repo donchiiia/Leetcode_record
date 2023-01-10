@@ -39,7 +39,7 @@ Please notice that another valid answer is [5,2,6,null,4,null,7] and it&#39;s al
 
 <ul>
 	<li>The number of nodes in the tree is in the range <code>[0, 10<sup>4</sup>]</code>.</li>
-	<li><code>-10<sup>5</sup> &lt;= Node.val &lt;= 10<sup>5</sup></code></li>
+	<li><code>-10<sup>5</sup> &lt;= editor.cn.Node.val &lt;= 10<sup>5</sup></code></li>
 	<li>Each node has a <strong>unique</strong> value.</li>
 	<li><code>root</code> is a valid binary search tree.</li>
 	<li><code>-10<sup>5</sup> &lt;= key &lt;= 10<sup>5</sup></code></li>

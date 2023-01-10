@@ -1,3 +1,5 @@
+package editor.cn;
+
 /**
 Given a root node reference of a BST and a key, delete the node with the given 
 key in the BST. Return the root node reference (possibly updated) of the BST. 
@@ -74,13 +76,13 @@ public class DeleteNodeInABst{
     //leetcode submit region begin(Prohibit modification and deletion)
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class editor.cn.TreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *     editor.cn.TreeNode left;
+ *     editor.cn.TreeNode right;
+ *     editor.cn.TreeNode() {}
+ *     editor.cn.TreeNode(int val) { this.val = val; }
+ *     editor.cn.TreeNode(int val, editor.cn.TreeNode left, editor.cn.TreeNode right) {
  *         this.val = val;
  *         this.left = left;
  *         this.right = right;

@@ -1,4 +1,6 @@
-  /**
+package editor.cn;
+
+/**
 Given the roots of two binary trees root and subRoot, return true if there is a 
 subtree of root with the same structure and node values of subRoot and false 
 otherwise. 
@@ -42,13 +44,13 @@ Output: false
       //leetcode submit region begin(Prohibit modification and deletion)
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class editor.cn.TreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *     editor.cn.TreeNode left;
+ *     editor.cn.TreeNode right;
+ *     editor.cn.TreeNode() {}
+ *     editor.cn.TreeNode(int val) { this.val = val; }
+ *     editor.cn.TreeNode(int val, editor.cn.TreeNode left, editor.cn.TreeNode right) {
  *         this.val = val;
  *         this.left = left;
  *         this.right = right;

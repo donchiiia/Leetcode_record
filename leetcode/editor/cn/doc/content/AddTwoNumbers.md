@@ -30,7 +30,7 @@
 
 <ul>
 	<li>The number of nodes in each linked list is in the range <code>[1, 100]</code>.</li>
-	<li><code>0 &lt;= Node.val &lt;= 9</code></li>
+	<li><code>0 &lt;= editor.cn.Node.val &lt;= 9</code></li>
 	<li>It is guaranteed that the list represents a number that does not have leading zeros.</li>
 </ul>
 <div><div>Related Topics</div><div><li>递归</li><li>链表</li><li>数学</li></div></div><br><div><li>👍 8074</li><li>👎 0</li></div>

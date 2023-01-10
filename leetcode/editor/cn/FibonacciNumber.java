@@ -1,6 +1,6 @@
-import org.junit.Test;
+package editor.cn;
 
-import javax.sound.midi.Soundbank;
+import org.junit.Test;
 
 /**
 The Fibonacci numbers, commonly denoted F(n) form a sequence, called the 

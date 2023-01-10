@@ -1,4 +1,4 @@
-/**
+package editor.cn; /**
 /**
  You are asked to cut off all the trees in a forest for a golf event. The 
 forest is represented as an m x n matrix. In this matrix: 
@@ -63,8 +63,6 @@ Note that you can cut off the first tree at (0, 0) before making any steps.
  
  Related Topics 广度优先搜索 数组 矩阵 堆（优先队列） 👍 135 👎 0 
 */
-
-import org.w3c.dom.ls.LSInput;
 
 import java.util.*;
 

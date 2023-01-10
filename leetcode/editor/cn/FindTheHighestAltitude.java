@@ -1,6 +1,4 @@
-import com.sun.source.doctree.HiddenTree;
-
-import java.util.zip.GZIPInputStream;
+package editor.cn;
 
 /**
 There is a biker going on a road trip. The road trip consists of n + 1 points 

@@ -1,4 +1,5 @@
-import java.awt.*;
+package editor.cn;
+
 import java.util.Arrays;
 
 /**

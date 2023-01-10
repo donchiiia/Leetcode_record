@@ -1,3 +1,5 @@
+package editor.cn;
+
 import java.util.ArrayDeque;
 import java.util.Queue;
 
@@ -42,13 +44,13 @@ Output: 0
       //leetcode submit region begin(Prohibit modification and deletion)
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class editor.cn.TreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *     editor.cn.TreeNode left;
+ *     editor.cn.TreeNode right;
+ *     editor.cn.TreeNode() {}
+ *     editor.cn.TreeNode(int val) { this.val = val; }
+ *     editor.cn.TreeNode(int val, editor.cn.TreeNode left, editor.cn.TreeNode right) {
  *         this.val = val;
  *         this.left = left;
  *         this.right = right;

@@ -1,4 +1,4 @@
-/**
+package editor.cn; /**
 /**
 /**
 The Tribonacci sequence Tn is defined as follows: 
@@ -37,9 +37,6 @@ Output: 1389537
  Related Topics 记忆化搜索 数学 动态规划 👍 204 👎 0
 
 */
-
-import org.junit.Test;
-
 
 
 public class NThTribonacciNumber{

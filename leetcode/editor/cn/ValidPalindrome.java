@@ -1,4 +1,4 @@
-import java.io.CharArrayReader;
+package editor.cn;
 
 /**
 A phrase is a palindrome if, after converting all uppercase letters into 

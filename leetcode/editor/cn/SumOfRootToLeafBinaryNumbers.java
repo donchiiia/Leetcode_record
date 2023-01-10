@@ -1,3 +1,5 @@
+package editor.cn;
+
 /**
 You are given the root of a binary tree where each node has a value 0 or 1. 
 Each root-to-leaf path represents a binary number starting with the most 
@@ -48,13 +50,13 @@ public class SumOfRootToLeafBinaryNumbers{
     //leetcode submit region begin(Prohibit modification and deletion)
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class editor.cn.TreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *     editor.cn.TreeNode left;
+ *     editor.cn.TreeNode right;
+ *     editor.cn.TreeNode() {}
+ *     editor.cn.TreeNode(int val) { this.val = val; }
+ *     editor.cn.TreeNode(int val, editor.cn.TreeNode left, editor.cn.TreeNode right) {
  *         this.val = val;
  *         this.left = left;
  *         this.right = right;

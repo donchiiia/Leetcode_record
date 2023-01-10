@@ -1,5 +1,4 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
+package editor.cn;
 
 /**
 Given an integer array nums, return the number of longest increasing 

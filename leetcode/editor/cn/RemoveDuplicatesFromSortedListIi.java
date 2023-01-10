@@ -1,6 +1,4 @@
-import java.util.HashSet;
-import java.util.List;
-import java.util.Stack;
+package editor.cn;
 
 /**
 Given the head of a sorted linked list, delete all nodes that have duplicate 
@@ -59,12 +57,12 @@ Output: [2,3]
       //leetcode submit region begin(Prohibit modification and deletion)
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * public class editor.cn.ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ *     editor.cn.ListNode next;
+ *     editor.cn.ListNode() {}
+ *     editor.cn.ListNode(int val) { this.val = val; }
+ *     editor.cn.ListNode(int val, editor.cn.ListNode next) { this.val = val; this.next = next; }
  * }
  */
 class Solution {

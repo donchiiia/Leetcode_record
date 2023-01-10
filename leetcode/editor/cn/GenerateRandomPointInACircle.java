@@ -1,3 +1,5 @@
+package editor.cn;
+
 import java.util.Random;
 
 /**
@@ -46,7 +48,7 @@ solution.randPoint(); // return [0.36572, 0.17248]
 
 public class GenerateRandomPointInACircle{
     public static void main(String[] args) {
-//        Solution solution = new GenerateRandomPointInACircle().new Solution();
+//        Solution solution = new editor.cn.GenerateRandomPointInACircle().new Solution();
     }
     
     //leetcode submit region begin(Prohibit modification and deletion)

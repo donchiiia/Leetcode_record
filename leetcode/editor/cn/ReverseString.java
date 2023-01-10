@@ -1,4 +1,4 @@
-import java.util.jar.JarEntry;
+package editor.cn;
 
 /**
 Write a function that reverses a string. The input string is given as an array 

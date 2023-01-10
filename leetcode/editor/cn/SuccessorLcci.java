@@ -1,3 +1,5 @@
+package editor.cn;
+
 /**
 Write an algorithm to find the "next" node (i.e., in-order successor) of a 
 given node in a binary search tree. 
@@ -40,11 +42,11 @@ public class SuccessorLcci{
   //leetcode submit region begin(Prohibit modification and deletion)
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * public class editor.cn.TreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     editor.cn.TreeNode left;
+ *     editor.cn.TreeNode right;
+ *     editor.cn.TreeNode(int x) { val = x; }
  * }
  */
 public class TreeNode {

@@ -1,4 +1,4 @@
-import java.util.concurrent.atomic.AtomicMarkableReference;
+package editor.cn;
 
 /**
 You are a professional robber planning to rob houses along a street. Each house 

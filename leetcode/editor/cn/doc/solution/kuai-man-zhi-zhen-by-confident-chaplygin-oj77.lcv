@@ -9,19 +9,19 @@
 ```java
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * public class editor.cn.ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ *     editor.cn.ListNode next;
+ *     editor.cn.ListNode() {}
+ *     editor.cn.ListNode(int val) { this.val = val; }
+ *     editor.cn.ListNode(int val, editor.cn.ListNode next) { this.val = val; this.next = next; }
  * }
  */
 class Solution {
-    public ListNode middleNode(ListNode head) 
+    public editor.cn.ListNode middleNode(editor.cn.ListNode head)
     {
-        ListNode slow = head;
-        ListNode fast = head;
+        editor.cn.ListNode slow = head;
+        editor.cn.ListNode fast = head;
         while(fast.next != null)
         {
             if(fast.next.next == null)//细节：如不把该种情况列出来，则会在fast.next.next为null时，进入while判断后再加一个next造成执行出错。因此此时需将其放缓一个节点，使进入while判断时恰为最后一个节点。

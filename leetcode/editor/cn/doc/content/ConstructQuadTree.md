@@ -12,13 +12,13 @@
 </ul>
 
 <pre>
-class Node {
+class editor.cn.Node {
     public boolean val;
     public boolean isLeaf;
-    public Node topLeft;
-    public Node topRight;
-    public Node bottomLeft;
-    public Node bottomRight;
+    public editor.cn.Node topLeft;
+    public editor.cn.Node topRight;
+    public editor.cn.Node bottomLeft;
+    public editor.cn.Node bottomRight;
 }</pre>
 
 <p>We can construct a Quad-Tree from a two-dimensional area using the following steps:</p>

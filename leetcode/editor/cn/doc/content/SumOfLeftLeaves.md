@@ -23,6 +23,6 @@
 
 <ul>
 	<li>The number of nodes in the tree is in the range <code>[1, 1000]</code>.</li>
-	<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
+	<li><code>-1000 &lt;= editor.cn.Node.val &lt;= 1000</code></li>
 </ul>
 <div><div>Related Topics</div><div><li>树</li><li>深度优先搜索</li><li>广度优先搜索</li><li>二叉树</li></div></div><br><div><li>👍 415</li><li>👎 0</li></div>

@@ -1,18 +1,18 @@
 /*
-// Definition for a Node.
-class Node {
+// Definition for a editor.cn.Node.
+class editor.cn.Node {
     public int val;
-    public Node left;
-    public Node right;
-    public Node next;
+    public editor.cn.Node left;
+    public editor.cn.Node right;
+    public editor.cn.Node next;
 
-    public Node() {}
+    public editor.cn.Node() {}
     
-    public Node(int _val) {
+    public editor.cn.Node(int _val) {
         val = _val;
     }
 
-    public Node(int _val, Node _left, Node _right, Node _next) {
+    public editor.cn.Node(int _val, editor.cn.Node _left, editor.cn.Node _right, editor.cn.Node _next) {
         val = _val;
         left = _left;
         right = _right;
@@ -22,7 +22,7 @@ class Node {
 */
 
 class Solution {
-    public Node connect(Node root) {
+    public editor.cn.Node connect(editor.cn.Node root) {
         if (root == null) return null;
         if (root.left != null && root.right != null) root.left.next = root.right;
         if (root.left != null && root.right == null) root.left.next = getNextInLevel(root.next);
@@ -32,7 +32,7 @@ class Solution {
         return root;
     }
 
-    private Node getNextInLevel(Node aim) {
+    private editor.cn.Node getNextInLevel(editor.cn.Node aim) {
         if (aim == null) return null;
         if (aim.left != null) return aim.left;
         if (aim.right != null) return aim.right;

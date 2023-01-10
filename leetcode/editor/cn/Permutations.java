@@ -1,7 +1,8 @@
+package editor.cn;
+
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 /**
 Given an array nums of distinct integers, return all the possible permutations. 

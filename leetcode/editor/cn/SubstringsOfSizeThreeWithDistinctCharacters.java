@@ -1,5 +1,4 @@
-import java.io.CharArrayReader;
-import java.util.HashSet;
+package editor.cn;
 
 /**
 A string is good if there are no repeated characters. 

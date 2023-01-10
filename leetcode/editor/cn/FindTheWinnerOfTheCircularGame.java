@@ -1,4 +1,6 @@
-  /**
+package editor.cn;
+
+/**
 There are n friends that are playing a game. The friends are sitting in a 
 circle and are numbered from 1 to n in clockwise order. More formally, moving 
 clockwise from the iᵗʰ friend brings you to the (i+1)ᵗʰ friend for 1 <= i < n, and 

@@ -24,6 +24,6 @@
 
 <ul>
 	<li>The number of nodes in the list is in the range <code>[1, 100]</code>.</li>
-	<li><code>1 &lt;= Node.val &lt;= 100</code></li>
+	<li><code>1 &lt;= editor.cn.Node.val &lt;= 100</code></li>
 </ul>
 <div><div>Related Topics</div><div><li>链表</li><li>双指针</li></div></div><br><div><li>👍 520</li><li>👎 0</li></div>

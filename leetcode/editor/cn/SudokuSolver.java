@@ -1,6 +1,4 @@
-import java.security.cert.TrustAnchor;
-import java.util.ArrayList;
-import java.util.Collection;
+package editor.cn;
 
 /**
 Write a program to solve a Sudoku puzzle by filling the empty cells. 

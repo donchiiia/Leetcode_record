@@ -4,18 +4,19 @@
 当fast为尾端时，slow为中间位置。
 
 ```java
-class Solution {
-    public ListNode middleNode(ListNode head) {
-        ListNode fast = head, slow = head;
+import editor.cn.ListNode;
 
-        while (fast.next != null) {
-            if (fast.next.next == null) {
-                fast = fast.next;
-            }
-            else fast = fast.next.next;
-            slow = slow.next;
-        }
-        return slow;
-    }
+class Solution {
+	public ListNode middleNode(ListNode head) {
+		ListNode fast = head, slow = head;
+
+		while (fast.next != null) {
+			if (fast.next.next == null) {
+				fast = fast.next;
+			} else fast = fast.next.next;
+			slow = slow.next;
+		}
+		return slow;
+	}
 }
 ```

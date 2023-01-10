@@ -1,6 +1,4 @@
-import javax.swing.text.GapContent;
-import javax.swing.text.html.HTML;
-import java.text.Normalizer;
+package editor.cn;
 
 /**
 Given an array of integers nums sorted in non-decreasing order, find the 

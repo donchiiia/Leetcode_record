@@ -1,0 +1,33 @@
+参考灵神思路
+
+* cpp
+
+```cpp
+/*
+    1. 贪心，堆叠高度最高，因此h应取三条边的最大值，将[w, l, h]或者[l, w, h]从小到大排序
+    2. 最难理解的一点，若A=[w1, l1, h1]可以放置在B[w2, l2, h2]方块的上面，仅当w1 <= w2且l1 <= l2且h1 <= h2时才满足。反证法如下
+        1. 若w1 > w2, 则有 w2 < w1 <= l1 <= h1，显然w1不满足摆放要求
+        2. 若l1 > l2, 则有 w2 <= l2 < l1 <= h1，此刻存在2种情况
+            1. 若w1 <= w2, 此刻w1既可以匹配w2，也可以匹配l2，但是一条边只能匹配一个，因此w2和l2其中一个是不满足要求的
+            2. 若w1 > w2，此刻又回到第一种情况，不满足要求
+        3. 若h1 > h2, 则有 w2 <= l2 <= h2 < h1，显然h1不满足摆放要求
+    3. 转为最长递增子序列问题
+*/
+class Solution {
+public:
+    int f[110] = {0};
+    int maxHeight(vector<vector<int>>& ass) {
+        int n = ass.size();
+        for (auto &as : ass) sort(as.begin(), as.end());
+        sort(ass.begin(), ass.end());  // j < i && ass[j][0] <= ass[i][0]
+        int res = -1;
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < i; ++j) if (ass[j][1] <= ass[i][1] && ass[j][2] <= ass[i][2]) f[i] = max(f[i], f[j]);
+            f[i] += ass[i][2];
+            res = max(f[i], res);
+        }
+        return res;
+    }
+};
+```
+

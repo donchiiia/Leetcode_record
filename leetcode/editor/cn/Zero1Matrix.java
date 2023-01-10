@@ -1,4 +1,5 @@
-import javax.swing.plaf.synth.ColorType;
+package editor.cn;
+
 import java.util.Arrays;
 
 /**

@@ -1,5 +1,6 @@
+package editor.cn;
+
 import java.util.HashMap;
-import java.util.HashSet;
 
 /**
 Given an integer array nums and an integer k, return true if there are two 

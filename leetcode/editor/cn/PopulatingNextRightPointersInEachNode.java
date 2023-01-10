@@ -1,8 +1,6 @@
+package editor.cn;
 
 import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
 You are given a perfect binary tree where all leaves are on the same level, and 

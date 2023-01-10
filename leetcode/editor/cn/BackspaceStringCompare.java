@@ -1,6 +1,4 @@
-import com.sun.source.tree.ContinueTree;
-
-import java.util.Stack;
+package editor.cn;
 
 /**
 Given two strings s and t, return true if they are equal when both are typed 

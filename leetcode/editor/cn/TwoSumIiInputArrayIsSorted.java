@@ -1,4 +1,4 @@
-import jdk.swing.interop.LightweightContentWrapper;
+package editor.cn;
 
 /**
 Given a 1-indexed array of integers numbers that is already sorted in non-

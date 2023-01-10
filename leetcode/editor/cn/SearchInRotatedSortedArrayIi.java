@@ -1,4 +1,6 @@
-  /**
+package editor.cn;
+
+/**
 There is an integer array nums sorted in non-decreasing order (not necessarily 
 with distinct values). 
 

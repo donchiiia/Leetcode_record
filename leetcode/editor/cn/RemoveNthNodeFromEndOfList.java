@@ -1,3 +1,5 @@
+package editor.cn;
+
 import java.util.Scanner;
 
 /**
@@ -67,12 +69,12 @@ Output: [1]
       //leetcode submit region begin(Prohibit modification and deletion)
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * public class editor.cn.ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ *     editor.cn.ListNode next;
+ *     editor.cn.ListNode() {}
+ *     editor.cn.ListNode(int val) { this.val = val; }
+ *     editor.cn.ListNode(int val, editor.cn.ListNode next) { this.val = val; this.next = next; }
  * }
  */
 class Solution {
@@ -93,7 +95,7 @@ class Solution {
         if (cum == n) return head.next;
         return head;*/
 /*    if (head == null || head.next == null) return null;
-    ListNode fast = head, slow = head;
+    editor.cn.ListNode fast = head, slow = head;
 
         for (int i = 0; i < n; i++) {
         fast = fast.next;

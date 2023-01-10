@@ -1,3 +1,5 @@
+package editor.cn;
+
 /**
 Given an array of points on the X-Y plane points where points[i] = [xi, yi], 
 return the area of the largest triangle that can be formed by any three different 
